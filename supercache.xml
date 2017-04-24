@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="system">
+	<name>plg_supercache</name>
+	<author>Norman Malessa</author>
+	<creationDate>2017/04/23</creationDate>
+	<copyright>Copyright (C) 2015 Norman Malessa. All rights reserved.</copyright>
+	<license>The MIT license; see LICENSE</license>
+	<authorEmail>mail@norman-malessa.de</authorEmail>
+	<authorUrl>www.norman-malessa.de</authorUrl>
+	<version>1.0.0</version>
+	<description>plg_supercache</description>
+	<files>
+		<filename plugin="supercache">supercache.php</filename>
+	</files>
+	<languages></languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="lifetime"
+					   default="15"
+					   type="number"
+					   min="0"
+					   step="1"
+					   label="cache lifetime"
+					   description="Number of minutes how long pages get cached" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
