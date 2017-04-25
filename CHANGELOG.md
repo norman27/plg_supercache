@@ -4,4 +4,4 @@
 
     2017-04-23  Norman Malessa  <mail@norman-malessa.de>
 
-        * Initial commit
+        * Initial version
