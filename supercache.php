@@ -1,9 +1,12 @@
 <?php
 /**
- * @author Norman Malessa <mail@norman-malessa.de>
- * @copyright 2015 Norman Malessa <mail@norman-malessa.de>
- * @license http://www.opensource.org/licenses/mit-license.php The MIT License, see LICENSE
+ * @author 		Norman Malessa <mail@norman-malessa.de>
+ * @copyright	2017 Norman Malessa <mail@norman-malessa.de>
+ * @copyright   Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.md
  */
+
+defined('_JEXEC') or die;
 
 class plgSystemSupercache extends JPlugin {
 	const SUPERCACHE_DIR = 'plg_supercache';

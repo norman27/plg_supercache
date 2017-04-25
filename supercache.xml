@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="3.1" type="plugin" group="system">
+<extension version="3.1" type="plugin" group="system" method="upgrade">
 	<name>plg_supercache</name>
 	<author>Norman Malessa</author>
 	<creationDate>2017/04/23</creationDate>
 	<copyright>Copyright (C) 2015 Norman Malessa. All rights reserved.</copyright>
-	<license>The MIT license; see LICENSE</license>
+	<license>GNU General Public License version 2 or later; see LICENSE.md</license>
 	<authorEmail>mail@norman-malessa.de</authorEmail>
 	<authorUrl>www.norman-malessa.de</authorUrl>
 	<version>1.0.0</version>
@@ -26,4 +26,7 @@
 			</fieldset>
 		</fields>
 	</config>
+	<updateservers>
+		<server type="extension" priority="1" name="plg_supercache Update Site">https://raw.githubusercontent.com/NormanMalessa/plg_supercache/master/update.xml</server>
+	</updateservers>
 </extension>
