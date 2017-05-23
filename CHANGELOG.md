@@ -1,5 +1,11 @@
 # master
 
+# v1.1.0
+
+    2017-05-23  Norman Malessa  <mail@norman-malessa.de>
+
+        * Add feature to configure routes to be cleared after an article is saved.
+
 # v1.0.1
 
     2017-05-12  Norman Malessa  <mail@norman-malessa.de>

@@ -1,12 +1,9 @@
 <?php
 /**
- * @author 		Norman Malessa <mail@norman-malessa.de>
- * @copyright	2017 Norman Malessa <mail@norman-malessa.de>
- * @copyright   Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.md
+ * @author Norman Malessa <mail@norman-malessa.de>
+ * @copyright 2015 Norman Malessa <mail@norman-malessa.de>
+ * @license http://www.opensource.org/licenses/mit-license.php The MIT License, see LICENSE
  */
-
-defined('_JEXEC') or die;
 
 class plgSystemSupercache extends JPlugin {
 	const SUPERCACHE_DIR = 'plg_supercache';
@@ -47,6 +44,21 @@ class plgSystemSupercache extends JPlugin {
 		$app = JFactory::getApplication();
 		if ($this->isCaching) {
 			file_put_contents($this->getCacheFile(), $app->toString());
+		}
+	}
+
+	/**
+	 * Clear defined cache routes file on article save
+	 * @return void
+	 */
+	public function onContentAfterSave() {
+		$clearRoutes = explode(',', $this->params->get('clear_routes', ''));
+		if (count($clearRoutes) > 0) {
+			foreach ($clearRoutes as $route) {
+				$route = ltrim($route, '/');
+				$uri = Juri::root() . $route;
+				unlink($this->getCacheFile($uri));
+			}
 		}
 	}
 
@@ -95,14 +107,18 @@ class plgSystemSupercache extends JPlugin {
 	 * @return string
 	 */
 	private function getCacheDirectory() {
-		return JPATH_CACHE . DIRECTORY_SEPARATOR . static::SUPERCACHE_DIR;
+		return JPATH_ROOT . DIRECTORY_SEPARATOR . 'cache' . DIRECTORY_SEPARATOR . static::SUPERCACHE_DIR;
 	}
 
 	/**
+	 * @param string $uriString
 	 * @return string
 	 */
-	private function getCacheFile() {
-		$uri = JUri::getInstance();
-		return $this->getCacheDirectory() . DIRECTORY_SEPARATOR . md5($uri->toString());
+	private function getCacheFile($uriString = '') {
+		if ($uriString == '') {
+			$uri = JUri::getInstance();
+			$uriString = $uri->toString();
+		}
+		return $this->getCacheDirectory() . DIRECTORY_SEPARATOR . md5($uriString);
 	}
 }

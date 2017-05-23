@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.1" type="plugin" group="system" method="upgrade">
-	<name>System - Supercache</name>
+	<name>plg_supercache</name>
 	<author>Norman Malessa</author>
 	<creationDate>2017/04/23</creationDate>
 	<copyright>Copyright (C) 2015 Norman Malessa. All rights reserved.</copyright>
-	<license>GNU General Public License version 2 or later; see LICENSE.md</license>
+	<license>The MIT license; see LICENSE</license>
 	<authorEmail>mail@norman-malessa.de</authorEmail>
 	<authorUrl>www.norman-malessa.de</authorUrl>
-	<version>1.0.1</version>
-	<description>This plugin lets you drain the most performance out of Joomla which should be possible inside the system.</description>
+	<version>1.1.0</version>
+	<description>plg_supercache</description>
 	<files>
 		<filename plugin="supercache">supercache.php</filename>
 	</files>
@@ -23,10 +23,12 @@
 					   step="1"
 					   label="cache lifetime"
 					   description="Number of minutes how long pages get cached" />
+				<field name="clear_routes"
+					   default=""
+					   type="text"
+					   label="clear routes"
+					   description="Comma seperated list of routes to reset the cache on if an article is saved. Routes should be written relative to your document root, i.e. '/news/list,/archive' Leave empty to disable." />
 			</fieldset>
 		</fields>
 	</config>
-	<updateservers>
-		<server type="extension" priority="1" name="plg_supercache Update Site">https://raw.githubusercontent.com/NormanMalessa/plg_supercache/master/update.xml</server>
-	</updateservers>
 </extension>
