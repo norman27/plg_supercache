@@ -5,10 +5,10 @@
         <description>This plugin lets you drain the most performance out of Joomla which should be possible inside the system.</description>
         <element>plg_supercache</element>
         <type>plugin</type>
-        <version>1.1.0</version>
-        <infourl title="plg_supercache 1.1.0">http://joomla.norman-malessa.de/</infourl>
+        <version>1.1.1</version>
+        <infourl title="plg_supercache 1.1.1">http://joomla.norman-malessa.de/</infourl>
         <downloads>
-            <downloadurl type="full" format="zip">http://joomla.norman-malessa.de/updates/plg_supercache_v1.1.0.zip</downloadurl>
+            <downloadurl type="full" format="zip">http://joomla.norman-malessa.de/updates/plg_supercache_v1.1.1.zip</downloadurl>
         </downloads>
         <tags>
             <tag>stable</tag>

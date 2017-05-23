@@ -1,5 +1,6 @@
 # master
 
+# v1.1.1
 # v1.1.0
 
     2017-05-23  Norman Malessa  <mail@norman-malessa.de>

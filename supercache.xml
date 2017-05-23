@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.1" type="plugin" group="system" method="upgrade">
-	<name>plg_supercache</name>
+	<name>System - Supercache</name>
 	<author>Norman Malessa</author>
 	<creationDate>2017/04/23</creationDate>
 	<copyright>Copyright (C) 2015 Norman Malessa. All rights reserved.</copyright>
 	<license>The MIT license; see LICENSE</license>
 	<authorEmail>mail@norman-malessa.de</authorEmail>
 	<authorUrl>www.norman-malessa.de</authorUrl>
-	<version>1.1.0</version>
-	<description>plg_supercache</description>
+	<version>1.1.1</version>
+	<description>This plugin lets you drain the most performance out of Joomla which should be possible inside the system.</description>
 	<files>
 		<filename plugin="supercache">supercache.php</filename>
 	</files>
@@ -31,4 +31,7 @@
 			</fieldset>
 		</fields>
 	</config>
+	<updateservers>
+		<server type="extension" priority="1" name=""><![CDATA[https://raw.githubusercontent.com/NormanMalessa/plg_supercache/master/update.xml]]></server>
+	</updateservers>
 </extension>
