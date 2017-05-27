@@ -3,16 +3,18 @@
 	<name>System - Supercache</name>
 	<author>Norman Malessa</author>
 	<creationDate>2017/04/23</creationDate>
-	<copyright>Copyright (C) 2015 Norman Malessa. All rights reserved.</copyright>
+	<copyright>Copyright (C) 2017 Norman Malessa. All rights reserved.</copyright>
 	<license>The MIT license; see LICENSE</license>
 	<authorEmail>mail@norman-malessa.de</authorEmail>
 	<authorUrl>www.norman-malessa.de</authorUrl>
-	<version>1.1.1</version>
+	<version>1.1.2</version>
 	<description>This plugin lets you drain the most performance out of Joomla which should be possible inside the system.</description>
 	<files>
 		<filename plugin="supercache">supercache.php</filename>
 	</files>
-	<languages></languages>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_supercache.ini</language>
+	</languages>
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
@@ -21,13 +23,13 @@
 					   type="number"
 					   min="0"
 					   step="1"
-					   label="cache lifetime"
-					   description="Number of minutes how long pages get cached" />
+					   label="PLG_SYSTEM_SUPERCACHE_FIELD_LIFETIME_LABEL"
+					   description="PLG_SYSTEM_SUPERCACHE_FIELD_LIFETIME_DESC" />
 				<field name="clear_routes"
 					   default=""
 					   type="text"
-					   label="clear routes"
-					   description="Comma seperated list of routes to reset the cache on if an article is saved. Routes should be written relative to your document root, i.e. '/news/list,/archive' Leave empty to disable." />
+					   label="PLG_SYSTEM_SUPERCACHE_FIELD_CLEAR_ROUTES_LABEL"
+					   description="PLG_SYSTEM_SUPERCACHE_FIELD_CLEAR_ROUTES_DESC" />
 			</fieldset>
 		</fields>
 	</config>

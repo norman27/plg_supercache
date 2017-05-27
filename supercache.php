@@ -1,7 +1,7 @@
 <?php
 /**
  * @author Norman Malessa <mail@norman-malessa.de>
- * @copyright 2015 Norman Malessa <mail@norman-malessa.de>
+ * @copyright 2017 Norman Malessa <mail@norman-malessa.de>
  * @license http://www.opensource.org/licenses/mit-license.php The MIT License, see LICENSE
  */
 
