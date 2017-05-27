@@ -34,6 +34,6 @@
 		</fields>
 	</config>
 	<updateservers>
-		<server type="extension" priority="1" name=""><![CDATA[https://raw.githubusercontent.com/NormanMalessa/plg_supercache/master/update.xml]]></server>
+		<server type="extension" priority="1" name=""><![CDATA[http://joomla.norman-malessa.de/updates/plg_supercache.xml]></server>
 	</updateservers>
 </extension>
